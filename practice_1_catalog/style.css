@@ -1,0 +1,32 @@
+h1{
+	font-family: monospace;
+	font-weight: bold;
+	text-align: center;
+}
+p{
+	font-family: monospace;
+	font-size: 20px;
+	color: #669900;
+	text-align: center;
+}
+ol{
+	margin: auto;
+	width: 45%;
+	list-style-position:inside;
+	text-align: left;
+}
+a{
+	font-family: monospace;
+	font-size: 17px;
+}
+a:link{
+	color: blue;
+}
+a:visited{
+	color: gray;
+}
+div{
+	margin: auto;
+	width: 50%;
+	//Center aligning has no effect if the width property is not set (or set to 100%).
+}
