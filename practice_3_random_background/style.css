@@ -1,0 +1,19 @@
+body{
+  background: white;
+}
+
+div{
+  text-align: center;
+  margin: 100px auto;
+}
+
+p{
+  display: inline-block;
+  color: #f9fafa;
+  background: #bc1939;
+  text-decoration: none;
+  text-align: center;
+  padding: 15px 30px;
+  font-family: monospace;
+  font-size: 20px;
+}
