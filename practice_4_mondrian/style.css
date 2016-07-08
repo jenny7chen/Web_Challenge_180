@@ -1,0 +1,61 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+}
+
+#container{
+  margin: auto;
+  width: 70%;
+  background-color: #ffffcc;
+  border: solid 1px black;
+  min-height: 400px;
+
+  white-space: nowrap;
+  /*set this to remove white space in parent for the inline-block not work problem*/
+}
+
+#palette{
+  width: auto;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+
+.palette_element{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: solid 1px black;
+}
+
+#pink{
+  background-color: pink;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#blue{
+  background-color: blue;
+}
+
+#white{
+  background-color: white;
+}
+
+#workspace{
+  height: inherit;
+  background-color: white;
+  border: solid 1px black;
+  width: 80%;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
