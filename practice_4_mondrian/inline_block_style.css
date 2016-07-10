@@ -13,7 +13,7 @@ h1{
   width: 70%;
   background-color: #ffffcc;
   border: solid 1px black;
-  min-height: 400px;
+  min-height: 500px;
 
   white-space: nowrap;
   /*set this to remove white space in parent for the inline-block not work problem*/
@@ -24,7 +24,7 @@ h1{
   display: inline-block;
   *zoom: 1;
   *display: inline;
-  vertical-align: top;
+  vertical-align: center;
 }
 
 .palette_element{
@@ -51,7 +51,7 @@ h1{
 }
 
 #workspace{
-  height: inherit;
+  height: 450px;
   background-color: white;
   border: solid 1px black;
   width: 80%;

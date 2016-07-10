@@ -1,0 +1,119 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1{
+  text-align: center;
+}
+
+#container{
+  margin: auto;
+  width: 70%;
+  background-color: #ffffcc;
+  border: solid 1px black;
+  height: 500px;
+  display: table;
+
+  border-collapse:separate;
+  border-spacing: 20px;
+  /* the margin property is not applicable to display:table-cell elements.
+  using border-spacing of table instead */
+}
+
+#palette{
+  width: 10%;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.palette_element{
+  width: 70px;
+  height: 70px;
+  margin: 15px;
+  border: solid 1px black;
+  cursor: pointer;
+}
+
+#pink{
+  background-color: pink;
+}
+
+#yellow{
+  background-color: yellow;
+}
+
+#blue{
+  background-color: blue;
+}
+
+#white{
+  background-color: white;
+}
+
+#workspace{
+  height: auto;
+  background-color: white;
+  width: 70%;
+  display: table-cell;
+}
+
+.row{
+  font-size: 0;
+  /* set this to avoid white space between divs*/
+}
+
+#row_1{
+  height: 90px;
+}
+
+#row_2{
+  height: 150px;
+}
+
+#row_3{
+  height: 120px;
+}
+
+#row_4{
+  height: 160px;
+}
+
+.box{
+  display: inline-block;
+  height: inherit;
+
+  background-clip: content-box;
+  /* set this to avoid painting background color from over the border*/
+}
+
+#box_1{
+  width: 20%;
+  border-right: solid 8px black;
+  border-top: solid 8px black;
+  border-left: solid 8px black;
+
+}
+
+#box_2{
+  width: 40%;
+  border-right: solid 8px black;
+  border-top: solid 8px black;
+}
+
+#box_3{
+  width: 15%;
+  border-right: solid 8px black;
+  border-top: solid 8px black;
+}
+
+#box_4{
+  width: 25%;
+  border-top: solid 8px black;
+  border-right: solid 8px black;
+}
+
+#row_4 .box{
+  border-bottom: solid 8px black;
+}
