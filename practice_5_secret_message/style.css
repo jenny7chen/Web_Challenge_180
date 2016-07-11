@@ -1,0 +1,36 @@
+body{
+  background-color: #ffe6f2;
+}
+
+#top_container{
+  position: fixed;
+  top: 200px;
+}
+
+#bottom_container{
+  position: absolute;
+  top: 2500px;
+  height: 1000px;
+  width: 100%;
+}
+
+#hint{
+  margin: 180px 0 0 100px;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 25px;
+  color: #009999;
+}
+
+p{
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+  font-size: 20px;
+  color: #0066cc;
+}
+
+p{
+  margin-left: 100px;
+}
+
+#attribute{
+  margin-left: 500px;
+}
