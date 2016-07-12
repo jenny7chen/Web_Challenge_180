@@ -26,3 +26,7 @@ h1{
 #result{
   color: #0066cc;
 }
+
+.today{
+  background-color: yellow;
+}

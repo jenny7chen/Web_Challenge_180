@@ -10,7 +10,7 @@ function resetDayColor(){
 function setTodayColor(){
   var date = new Date();
   var weekday = date.getDay();
-  $("#" + weekday).css("color", "#ffe6f2");
+  $("#" + weekday).addClass("today");
   var todayText = $("#" + weekday).text();
   $("#result").text("It's " + todayText + "!");
 }
