@@ -1,0 +1,16 @@
+body{
+  height: 100%;
+  background: #101010;
+}
+
+#container{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.box{
+  width: 200px;
+  height: 200px;
+  float: left;
+  background-color: #444;
+}
