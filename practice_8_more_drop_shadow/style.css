@@ -1,0 +1,36 @@
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+
+/* Make text unselectable in all browser*/
+*.unselectable {
+   -moz-user-select: -moz-none;
+   -khtml-user-select: none;
+   -webkit-user-select: none;
+
+   /*
+     Introduced in IE 10.
+     See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+   */
+   -ms-user-select: none;
+   user-select: none;
+}
+
+#container{
+  margin: 0 auto;
+  width: 1000px;
+  margin-top: 50px;
+  text-align: center;
+  /* text-align:center works on inline and inline-block elements */
+}
+
+img{
+  box-shadow: 0 0 0 0 rgb(0,0,0);
+}
+
+.text_shadow{
+  text-shadow: 0px 0px 0px rgb(0,0,0);
+}
