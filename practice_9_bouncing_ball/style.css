@@ -1,0 +1,48 @@
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Monaco, Consolas, "Lucida Console", monospace;
+}
+
+#main_container{
+  margin: 0 auto;
+  width: 900px;
+}
+
+#title_container{
+  float: left;
+  width: 300px;
+  position: relative;
+  top:100px;
+}
+
+#game_container{
+  float: right;
+  width: 600px;
+  min-height: 650px;
+  position: relative;
+  top:20px;
+}
+
+#hint_container{
+  width: 600px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  padding-top: 300px;
+}
+
+#ball{
+  height: 120px;
+  width: 120px;
+  background-color: #329999;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 50%;
+  position: relative;
+}
+
+#replay{
+  display: none;
+}
