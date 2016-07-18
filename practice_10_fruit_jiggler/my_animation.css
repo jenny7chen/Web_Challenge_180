@@ -1,0 +1,142 @@
+.move{
+  -webkit-animation: mymove 1s;
+	animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    0%   {top: 0px;}
+    20% {top: -10px;}
+    30% {top: 0px;}
+    50% {top: -10px;}
+    100% {top: 0px;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0%   {top: 0px;}
+  30% {top: -20px;}
+  50% {top: 0px;}
+  70% {top: -20px;}
+  100% {top: 0px;}
+}
+
+.tada{
+  -webkit-animation: tada 1s;
+	animation: tada 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes tada {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+    10%, 20% {
+      -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%, 50%, 70%, 90% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%, 60%, 80% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+/* Standard syntax */
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+      -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+      transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.spin_back{
+  -webkit-animation: spin_back 1s;
+	animation: spin_back 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin_back {
+    from {
+      -webkit-transform: rotate3d(0, 0, 0, 0);
+      transform: rotate3d(0, 0, 0, 0);
+    }
+    50% {
+      -webkit-transform: rotate3d(0, 0, 1, 180deg);
+      transform: rotate3d(0, 0, 1, 180deg);
+    }
+    to {
+      -webkit-transform: rotate3d(0, 0, 0, 0);
+      transform: rotate3d(0, 0, 0, 0);
+    }
+}
+
+/* Standard syntax */
+@keyframes spin_back {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  50% {
+    -webkit-transform: rotate3d(0, 0, 1, 180deg);
+    transform: rotate3d(0, 0, 1, 180deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
+  }
+}
+
+
+.spin{
+  -webkit-animation: spin 1s;
+	animation: spin 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate3d(0, 0, 0, 0);
+      transform: rotate3d(0, 0, 0, 0);
+    }
+    to {
+      -webkit-transform: rotate3d(0, 0, 1, 360deg);
+      transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+/* Standard syntax */
+@keyframes spin {
+  from {
+    -webkit-transform: rotate3d(0, 0, 0, 0);
+    transform: rotate3d(0, 0, 0, 0);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    transform: rotate3d(0, 0, 1, 360deg);
+  }
+}
