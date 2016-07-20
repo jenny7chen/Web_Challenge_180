@@ -1,0 +1,36 @@
+.move{
+  -webkit-animation: mymove 1s;
+	animation: mymove 1s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+  0%, 100%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+}
+
+/* Standard syntax */
+@keyframes mymove {
+  0%, 100%{
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+}
