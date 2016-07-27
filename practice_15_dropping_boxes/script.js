@@ -1,22 +1,17 @@
 $(document).ready(function(){
+  jQuery.getScript("animate.js");
+  //import animate.js
+  //Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource.
 
-  // jQuery.getScript("animate.js");
-  // //Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource.
-  // var animationEndListener = new AnimationEndListener();
-  // $(".box").click(function(){
-  //   animateCss($(this), "crawl", animationEndListener);
-  // });
+  //use animationEndListener to listen to the animationEnd
+  var listener = new AnimationListener();
+  listener.onAnimationEnd = function(){
+    console.log("do something in callback");
+  }
 
-  $.fn.extend({
-    animateCss: function(animationName){
-      var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-      $(this).addClass(animationName).one(animationEnd, function(){
-        $(this).removeClass(animationName);
-      });
-    }
-  });
+  var animationArray = ["crawl", "dangle", "bling"];
 
   $(".box").click(function(){
-    $(this).animateCss("crawl");
+    animateCss($(this), getRandAnimation(animationArray), listener);
   });
 });
