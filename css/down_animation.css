@@ -1,0 +1,23 @@
+.down_slow{
+  -webkit-animation: down_slow 3s;
+	animation: down_slow 3s;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes down_slow {
+  0%{
+    -webkit-transform: translateY(0px);
+  }
+  100%{
+    -webkit-transform: translateY(400px);
+  }
+}
+/* Standard syntax */
+@keyframes down_slow {
+  0%{
+    transform: translateY(0px);
+  }
+  100%{
+    transform: translateY(400px);
+  }
+}
