@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  jQuery.getScript("animate.js");
-  //import animate.js
+  // jQuery.getScript("../js/animate.js");
+  //import animate.js : already import in html
   //Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, https, chrome-extension-resource.
 
   //use animationEndListener to listen to the animationEnd
