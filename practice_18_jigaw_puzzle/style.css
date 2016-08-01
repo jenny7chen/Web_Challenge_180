@@ -1,0 +1,47 @@
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+
+body{
+  background-color: #fefbd8;
+}
+
+h1{
+  color: #36486b;
+  text-align: center;
+}
+
+#puzzle_container{
+  margin: auto;
+  width: auto;
+}
+
+.piece_container{
+  position: relative;
+  float: left;
+  width: 200px;
+  height: 200px;
+  display:inline-block;
+}
+
+.piece_wrapper{
+  width: 200px;
+  height: 200px;
+  display:inline-block;
+  position: relative;
+  cursor: pointer;
+}
+
+
+img{
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.piece:hover{
+  z-index: 5;
+}
