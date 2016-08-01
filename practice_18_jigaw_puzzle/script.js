@@ -18,15 +18,6 @@ $(document).ready(function(){
     return puzzle;
   }
 
-  jQuery.fn.swapWith = function(to) {
-    return this.each(function() {
-      var copy_to = $(to).clone();
-      var copy_from = $(this).clone();
-      $(to).replaceWith(copy_from);
-      $(this).replaceWith(copy_to);
-    });
-  };
-
   function initPuzzleElement(puzzle, index){
     var width = puzzleWidth[index];
     $("#puzzle_container").css("width", ("" + (width * 200) + "px"));
@@ -37,15 +28,13 @@ $(document).ready(function(){
       var container = document.createElement('div');
       var image = document.createElement('img');
       image.classList.add("piece");
-      container.classList.add("piece_wrapper");
       div.classList.add("piece_container");
       div.classList.add("" + i);
 
       var id = puzzles[index] + (i);
-      container.id = id;
+      image.id = id;
       image.setAttribute("src", "../image/puzzle/" + puzzle[i] + ".jpg");
-      container.appendChild(image);
-      div.appendChild(container);
+      div.appendChild(image);
       $("#puzzle_container").append(div);
     }
   }
@@ -53,27 +42,28 @@ $(document).ready(function(){
   function putPuzzle(puzzle, index){
     initPuzzleElement(puzzle, index);
     var $lastPlace;
-    $(".piece_wrapper").draggable({
+    $(".piece").draggable({
       revert: "invalid",
       zIndex: 100,
       snap: true,
       snapTolerance: 40,
+      snapMode: "inner",
       start: function(){
         $(this).parent().addClass("lastPlace");
-        console.log($(this).parent().prop("className"));
+        $(this).addClass("active");
       }
     });
 
     $(".piece_container").droppable({
       drop:function(event, ui){
-        var dropped = ui.draggable;
-        var droppedOn = this;
-        $(this).children().detach().prependTo($(".lastPlace"));
+        $(this).children().detach().appendTo($(".lastPlace"));
+        console.log("the block move to = " + $(".lastPlace").prop("className"));
+        $(".active").detach().appendTo($(this));
+        $(".active").css("z-index", 0);
         $(".lastPlace").removeClass("lastPlace");
-        ui.draggable.detach().prependTo($(this));
+        $(".active").removeClass(".active");
       },
-      // accept: ".piece",
-      tolerance: 'intersect'
+      // tolerance: 'intersect'
     });
   }
 

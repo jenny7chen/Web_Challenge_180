@@ -12,6 +12,8 @@ body{
 h1{
   color: #36486b;
   text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #puzzle_container{
@@ -20,28 +22,14 @@ h1{
 }
 
 .piece_container{
-  position: relative;
   float: left;
   width: 200px;
   height: 200px;
-  display:inline-block;
 }
-
-.piece_wrapper{
-  width: 200px;
-  height: 200px;
-  display:inline-block;
-  position: relative;
-  cursor: pointer;
-}
-
 
 img{
   width: 200px;
   height: 200px;
-  position: relative;
-}
-
-.piece:hover{
-  z-index: 5;
+  cursor: pointer;
+  position: absolute;
 }
