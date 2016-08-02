@@ -43,29 +43,38 @@ $(document).ready(function(){
       revert: "invalid",
       zIndex: 100,
       snap: true,
-      snapTolerance: 40,
+      snapTolerance: 15,
       snapMode: "inner",
+      containment: "window",
       start: function(){
         $(this).parent().addClass("lastPlace");
-        $(this).addClass("active");
+        // $(this).addClass("active");
+      },
+      stop: function(){
+        $(this).parent().removeClass("lastPlace");
       }
     });
 
     $(".piece_container").droppable({
       drop:function(event, ui){
-        $(this).children().last().detach().appendTo($(".lastPlace"));
-        $(".active").detach().appendTo($(this));
-        $(this).children().last().css("z-index", 0);
-        $(this).children().last().removeClass("active");
-
-        $(".lastPlace").children().last().attr("style","");
-        //reset the coordinate with reset style or it will be put in the wrong position
-        $(".lastPlace").children().last().css("position", "absolute");
+        var child = $(this).children().last().detach();
+        child.appendTo($(".lastPlace"));
+        child.attr("style","");
+        child.css("position", "absolute");
         $(".lastPlace").removeClass("lastPlace");
+
+        var dropped = ui.draggable.detach();
+        dropped.detach().appendTo($(this));
+        dropped.attr("style","");
+        //reset the coordinate with reset style or it will be put in the wrong position
+
+        dropped.css("position", "absolute");
+        dropped.css("z-index", 0);
+        dropped.removeClass("active");
 
         checkMatch();
       },
-      tolerance: 'intersect'
+      tolerance: "fit"
     });
   }
 
