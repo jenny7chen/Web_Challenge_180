@@ -1,19 +1,15 @@
 $(document).ready(function(){
   var puzzles = ["pie_p"];
   var puzzleWidth = [3];
+  var currentPuzzle = 0;
 
-  function getOriginalPuzzle(index){
+  function makePuzzle(index){
     var puzzleCount = puzzleWidth[index] * puzzleWidth[index];
     var puzzle = [];
     for(var i = 0; i < puzzleCount; i++){
       var piece = puzzles[index] + (i + 1);
       puzzle[i] = piece;
     }
-    return puzzle;
-  }
-
-  function makePuzzle(index){
-    var puzzle = getOriginalPuzzle(index);
     shuffle(puzzle);
     return puzzle;
   }
@@ -29,10 +25,11 @@ $(document).ready(function(){
       var image = document.createElement('img');
       image.classList.add("piece");
       div.classList.add("piece_container");
-      div.classList.add("" + i);
+      div.classList.add(puzzles[index] + (i + 1));
 
-      var id = puzzles[index] + (i);
+      var id = puzzle[i];
       image.id = id;
+      image.classList.add(id);
       image.setAttribute("src", "../image/puzzle/" + puzzle[i] + ".jpg");
       div.appendChild(image);
       $("#puzzle_container").append(div);
@@ -56,15 +53,35 @@ $(document).ready(function(){
 
     $(".piece_container").droppable({
       drop:function(event, ui){
-        $(this).children().detach().appendTo($(".lastPlace"));
-        console.log("the block move to = " + $(".lastPlace").prop("className"));
+        $(this).children().last().detach().appendTo($(".lastPlace"));
         $(".active").detach().appendTo($(this));
-        $(".active").css("z-index", 0);
+        $(this).children().last().css("z-index", 0);
+        $(this).children().last().removeClass("active");
+
+        $(".lastPlace").children().last().attr("style","");
+        //reset the coordinate with reset style or it will be put in the wrong position
+        $(".lastPlace").children().last().css("position", "absolute");
         $(".lastPlace").removeClass("lastPlace");
-        $(".active").removeClass(".active");
+
+        checkMatch();
       },
-      // tolerance: 'intersect'
+      tolerance: 'intersect'
     });
+  }
+
+  function checkMatch(){
+    var match = 0;
+    $('.piece_container').each(function(i, obj) {
+      var child = obj.childNodes[0];
+      if(obj.classList.contains(child.id)){
+        match++;
+      }
+    });
+    var width = puzzleWidth[currentPuzzle];
+    var count = width * width;
+    if(match == count){
+      $("h1").text("All match! Congratulations!");
+    }
   }
 
   /*Fisher-Yates (aka Knuth) Shuffle.
@@ -85,6 +102,7 @@ $(document).ready(function(){
     return array;
   }
 
+  currentPuzzle = 0;
   var puzzle = makePuzzle(0);
   putPuzzle(puzzle, 0);
 
