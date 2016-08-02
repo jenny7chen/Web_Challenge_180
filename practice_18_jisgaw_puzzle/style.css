@@ -1,0 +1,35 @@
+*{
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+}
+
+body{
+  background-color: #fefbd8;
+}
+
+h1{
+  color: #36486b;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#puzzle_container{
+  margin: auto;
+  width: auto;
+}
+
+.piece_container{
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  position: absolute;
+}
