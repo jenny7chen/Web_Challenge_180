@@ -43,7 +43,7 @@ $(document).ready(function(){
       revert: "invalid",
       zIndex: 100,
       snap: true,
-      snapTolerance: 40,
+      snapTolerance: 15,
       snapMode: "inner",
       start: function(){
         $(this).parent().addClass("lastPlace");
@@ -65,7 +65,7 @@ $(document).ready(function(){
 
         checkMatch();
       },
-      tolerance: 'intersect'
+      tolerance: "fit"
     });
   }
 
