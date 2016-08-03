@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>你是哪種情人呢？</title>
+  <link type="text/css" rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/jquery.scrollto/2.1.2/jquery.scrollTo.min.js"></script> -->
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <form id="form">
+    <div id="start_block">
+      <h1>愛情咖啡測驗～測測看你是哪種情人吧</h1>
+      <h2 id="start_text" class="button_text">開始</h2>
+    </div>
+
+    <div id="question_block">
+      <div id="q1_block" class="block">
+        <div class="divider_block">
+          <h2>下午跟心愛的他/她在咖啡廳約會時你會點？</h2>
+          <table>
+            <tr><td><input name="q1" type="radio" value="2" class="radio_text"></td><td><h2>熱咖啡</h2></td></tr>
+            <tr><td><input name="q1" type="radio" value="3" checked="true" class="radio_text"></td><td><h2>冰咖啡</h2></td></tr>
+          </table>
+          <div id="q1_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q2_block" class="block">
+        <div class="divider_block">
+          <h2>不過你也知道咖啡店多半都不加糖，看著桌上的糖包你會選擇？</h2>
+          <table>
+            <tr><td><input name="q2" type="radio" value="4" class="radio_text"></td><td><h2>砂糖</h2></td></tr>
+            <tr><td><input name="q2" type="radio" value="6" checked="true" class="radio_text"></td><td><h2>代糖</h2></td></tr>
+            <tr><td><input name="q2" type="radio" value="5" class="radio_text"></td><td><h2>不加糖</h2></td></tr>
+          </table>
+          <div id="q2_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q3_block" class="block">
+        <div class="divider_block">
+          <h2>為了方便客人，咖啡店提供了兩種杯子，你會選擇？</h2>
+          <table>
+            <tr><td><input name="q3" type="radio" value="9" class="radio_text"></td><td><h2>必須在店裡喝完的玻璃杯</h2></td></tr>
+            <tr><td><input name="q3" type="radio" value="4" checked="true" class="radio_text"></td><td><h2>可以帶走的塑膠/紙杯</h2></td></tr>
+          </table>
+          <div id="q3_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q4_block" class="block">
+        <div class="divider_block">
+          <h2>當咖啡喝到一半時，對方忽然說肚子有點餓想吃點心，問你要不要吃，你會選擇？</h2>
+          <table>
+            <tr><td><input name="q4" type="radio" value="6" class="radio_text"></td><td><h2>蛋糕</h2></td></tr>
+            <tr><td><input name="q4" type="radio" value="9" checked="true" class="radio_text"></td><td><h2>餅乾</h2></td></tr>
+            <tr><td><input name="q4" type="radio" value="8" class="radio_text"></td><td><h2>都不吃</h2></td></tr>
+          </table>
+          <div id="q4_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q5_block" class="block">
+        <div class="divider_block">
+          <h2>真希望能天天跟他（她）一起喝咖啡，想想自己平日到便利商店買咖啡時，通常決定購買的原因是？</h2>
+          <table>
+            <tr><td><input name="q5" type="radio" value="6" class="radio_text"></td><td><h2>品牌</h2></td></tr>
+            <tr><td><input name="q5" type="radio" value="11" checked="true" class="radio_text"></td><td><h2>鮮度</h2></td></tr>
+            <tr><td><input name="q5" type="radio" value="10" class="radio_text"></td><td><h2>濃度</h2></td></tr>
+          </table>
+          <div id="q5_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q6_block" class="block">
+        <div class="divider_block">
+          <h2>聊著聊著發現對方竟然是個咖啡高手，甚至還拿出一本花式咖啡食譜問你有沒有興趣，看著這本食譜你心裡想？</h2>
+          <table>
+            <tr><td><input name="q6" type="radio" value="7" class="radio_text"></td><td><h2>真想馬上試試看</h2></td></tr>
+            <tr><td><input name="q6" type="radio" value="11" checked="true" class="radio_text"></td><td><h2>絕對不會考慮自己做</h2></td></tr>
+            <tr><td><input name="q6" type="radio" value="8" class="radio_text"></td><td><h2>看看會不會很困難再說</h2></td></tr>
+          </table>
+          <div id="q6_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q7_block" class="block">
+        <div class="divider_block">
+          <h2>談到咖啡總是會忍不住想下次跟他（她）的咖啡之約最好在哪？</h2>
+          <table>
+            <tr><td><input name="q7" type="radio" value="17" class="radio_text"></td><td><h2>家裡</h2></td></tr>
+            <tr><td><input name="q7" type="radio" value="12" checked="true" class="radio_text"></td><td><h2>咖啡廳</h2></td></tr>
+            <tr><td><input name="q7" type="radio" value="18" class="radio_text"></td><td><h2>豪華的餐廳</h2></td></tr>
+          </table>
+          <div id="q7_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q8_block" class="block">
+        <div class="divider_block">
+          <h2>看對方似乎還蠻迷戀咖啡的，不禁想起自己喝咖啡的習慣是？</h2>
+          <table>
+            <tr><td><input name="q8" type="radio" value="18" class="radio_text"></td><td><h2>一天兩杯以上</h2></td></tr>
+            <tr><td><input name="q8" type="radio" value="17" checked="true" class="radio_text"></td><td><h2>一天一杯左右</h2></td></tr>
+            <tr><td><input name="q8" type="radio" value="7" class="radio_text"></td><td><h2>偶而喝或是不喝</h2></td></tr>
+          </table>
+          <div id="q8_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q9_block" class="block">
+        <div class="divider_block">
+          <h2>喜歡咖啡的他（她）無時無刻都可以來杯咖啡，不過對你來說最喜歡什麼時候喝咖啡呢？</h2>
+          <table>
+            <tr><td><input name="q9" type="radio" value="8" class="radio_text"></td><td><h2>早晨</h2></td></tr>
+            <tr><td><input name="q9" type="radio" value="16" checked="true" class="radio_text"></td><td><h2>下午</h2></td></tr>
+            <tr><td><input name="q9" type="radio" value="17" class="radio_text"></td><td><h2>晚上</h2></td></tr>
+          </table>
+          <div id="q9_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q10_block" class="block">
+        <div class="divider_block">
+          <h2>大概是最近太多機智問答的節目，他（她）居然要你猜猜喝咖啡人口最多的地方是？</h2>
+          <table>
+            <tr><td><input name="q10" type="radio" value="11" class="radio_text"></td><td><h2>美洲</h2></td></tr>
+            <tr><td><input name="q10" type="radio" value="13" checked="true" class="radio_text"></td><td><h2>亞洲</h2></td></tr>
+            <tr><td><input name="q10" type="radio" value="14" class="radio_text"></td><td><h2>歐洲</h2></td></tr>
+          </table>
+          <div id="q10_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q11_block" class="block">
+        <div class="divider_block">
+          <h2>有人說喝咖啡的習慣可以看出個性，雖然是第一次和他（她）喝咖啡？，你覺得他（她）的習慣是？</h2>
+          <table>
+            <tr><td><input name="q11" type="radio" value="12" class="radio_text"></td><td><h2>一口喝下</h2></td></tr>
+            <tr><td><input name="q11" type="radio" value="14" checked="true" class="radio_text"></td><td><h2>冷掉前慢慢喝完</h2></td></tr>
+            <tr><td><input name="q11" type="radio" value="7" class="radio_text"></td><td><h2>冷掉了也沒關係，仍會慢慢喝完</h2></td></tr>
+          </table>
+          <div id="q11_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q12_block" class="block">
+        <div class="divider_block">
+          <h2>說真的，除了兩個人的聚會適合喝杯咖啡，還有什麼場合適合喝咖啡呢？</h2>
+          <table>
+            <tr><td><input name="q12" type="radio" value="15" class="radio_text"></td><td><h2>自己一個人</h2></td></tr>
+            <tr><td><input name="q12" type="radio" value="19" checked="true" class="radio_text"></td><td><h2>跟三五好友</h2></td></tr>
+            <tr><td><input name="q12" type="radio" value="20" class="radio_text"></td><td><h2>很多人一起喝</h2></td></tr>
+          </table>
+          <div id="q12_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q13_block" class="block">
+        <div class="divider_block">
+          <h2>聊著聊著，話題轉到桌旁的咖啡器具櫃，說真的你對這些器材有興趣嗎？</h2>
+          <table>
+            <tr><td><input name="q13" type="radio" value="6" class="radio_text"></td><td><h2>非常有</h2></td></tr>
+            <tr><td><input name="q13" type="radio" value="11" checked="true" class="radio_text"></td><td><h2>還好</h2></td></tr>
+            <tr><td><input name="q13" type="radio" value="14" class="radio_text"></td><td><h2>一點興趣都沒有</h2></td></tr>
+          </table>
+          <div id="q13_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q14_block" class="block">
+        <div class="divider_block">
+          <h2>接著，他（她）又開始繼續解說喝咖啡時加牛奶和奶精的差別，你覺得他（她）是喜歡哪一種呢？</h2>
+          <table>
+            <tr><td><input name="q14" type="radio" value="12" class="radio_text"></td><td><h2>牛奶</h2></td></tr>
+            <tr><td><input name="q14" type="radio" value="15" checked="true" class="radio_text"></td><td><h2>奶精</h2></td></tr>
+          </table>
+          <div id="q14_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q15_block" class="block">
+        <div class="divider_block">
+          <h2>在他（她）的細心解說下，讓你對咖啡有了更多的了解，你想從今天開始你會沖泡哪一種咖啡？</h2>
+          <table>
+            <tr><td><input name="q15" type="radio" value="19" class="radio_text"></td><td><h2>沖泡三合一咖啡</h2></td></tr>
+            <tr><td><input name="q15" type="radio" value="20" checked="true" class="radio_text"></td><td><h2>必須另外加牛奶或奶精的咖啡</h2></td></tr>
+          </table>
+          <div id="q15_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q16_block" class="block">
+        <div class="divider_block">
+          <h2>你們聊得非常愉快，直到店裡換了另一張CD才發現你們已經聊了一個多小時，你發現新放的CD是？</h2>
+          <table>
+            <tr><td><input name="q16" type="radio" value="22" class="radio_text"></td><td><h2>古典音樂</h2></td></tr>
+            <tr><td><input name="q16" type="radio" value="21" checked="true" class="radio_text"></td><td><h2>抒情西洋歌曲</h2></td></tr>
+            <tr><td><input name="q16" type="radio" value="17" class="radio_text"></td><td><h2>流行歌曲</h2></td></tr>
+          </table>
+          <div id="q16_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q17_block" class="block">
+        <div class="divider_block">
+          <h2>咖啡快要喝完了，你們決定去看電影，而最近的電影院只有上映兩種類型的片，你們會選擇？</h2>
+          <table>
+            <tr><td><input name="q17" type="radio" value="21" class="radio_text"></td><td><h2>唯美浪漫的文藝愛情片</h2></td></tr>
+            <tr><td><input name="q17" type="radio" value="22" checked="true" class="radio_text"></td><td><h2>內容豐富的溫馨小品</h2></td></tr>
+          </table>
+          <div id="q17_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q18_block" class="block">
+        <div class="divider_block">
+          <h2>如果有人請他（她）當咖啡廣告的代言人，你覺得他（她）適合拍哪一種類型的電視廣告？</h2>
+          <table>
+            <tr><td><input name="q18" type="radio" value="17" class="radio_text"></td><td><h2>唯美浪漫</h2></td></tr>
+            <tr><td><input name="q18" type="radio" value="23" checked="true" class="radio_text"></td><td><h2>豪邁個性</h2></td></tr>
+          </table>
+          <div id="q18_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q19_block" class="block">
+        <div class="divider_block">
+          <h2>仔細想想你平日喝咖啡的時候有沒有攪拌的習慣？</h2>
+          <table>
+            <tr><td><input name="q19" type="radio" value="24" class="radio_text"></td><td><h2>沒有</h2></td></tr>
+            <tr><td><input name="q19" type="radio" value="22" checked="true" class="radio_text"></td><td><h2>剛開始時會攪拌</h2></td></tr>
+            <tr><td><input name="q19" type="radio" value="23" class="radio_text"></td><td><h2>每一口要喝之前都會攪拌</h2></td></tr>
+          </table>
+          <div id="q19_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q20_block" class="block">
+        <div class="divider_block">
+          <h2>如果咖啡占卜的費用是一次20分鐘100元，你還會試試看嗎？</h2>
+          <table>
+            <tr><td><input name="q20" type="radio" value="24" class="radio_text"></td><td><h2>會</h2></td></tr>
+            <tr><td><input name="q20" type="radio" value="23" checked="true" class="radio_text"></td><td><h2>不會</h2></td></tr>
+          </table>
+          <div id="q20_button" class="button"><h2 class="button_text">下一題</h2></div>
+        </div>
+      </div>
+
+      <div id="q21_block" class="block">
+        <div class="divider_block">
+          <h2>你屬於：A型，摩卡情人</h2>
+          <h3>愛情對你來說，就像摩卡咖啡一般，濃濃甜甜巧克力香味讓人難以抵擋，不要說是談戀愛，只是身邊出現喜歡的人，一定就會被周圍的人發現，到不是因為你刻意張揚，只是那種會為愛改變一切的人，八九不離十都是這一類。</h3>
+          <h3>一但陷入愛情中，平時不注意細節的人都會改成穿西裝打領帶，平時會破口罵人的這會兒都成了輕聲細語的淑女。而且屬於調情高手的你，不僅現在的情人會對你服服貼貼，就連已分手的情人想忘記你的好，也是難上加難喔！</h3>
+          <h3>你的愛情缺少的是-有情人的缺「獨立」：要思考你的愛情缺少什麼？絕對要用逆向思考的方式，應該問"別人的愛情不缺少什麼？"因為跟你談戀愛就算不用整天膩在一起，也很容易讓對方無時無刻掛念，若是處於熱戀期還頗助於感情的發展，可是，要想永久經營你們的感情，學習獨立和給彼此空間可是刻不容緩的課題。</h3>
+          <h3>單身的人缺「老實」：老實說"空窗期"對你而言根本是不可能會發生的事，因為你是那種從小就是全班的最佳人緣獎得主，所以，會有沒人追不過是被誤以為是名花（草）有主罷了！偏偏你又喜歡享受曖昧遊戲，要小心，人的耐心是有限的。有時肯定的答覆反而會為你帶來一段良緣。</h3>
+          <div id="q21_button" class="back_button"><h2 class="button_text">重新測驗</h2></div>
+        </div>
+      </div>
+
+      <div id="q22_block" class="block">
+        <div class="divider_block">
+          <h2>你屬於：B型，卡布奇諾情人</h2>
+          <h3>在你的生活哲學理，愛情絕對是一門勇奪榜首的學科，就好像咖啡與牛奶1：1的卡布奇諾，濃淡適宜恰到好處。很懂得自己要什麼的你，總是很清楚自己適合什麼樣的戀愛方式、適合跟什麼樣的人交往，甚至分手也會選在最適合的時間，對你而言談戀愛不但不會對原本的生活造成困擾，反而有加分的效果，當然並不是說你的愛情不會發生問題，而是當有問題時，總是不失理智勇敢面對，令人讚嘆的愛情EQ著實令人佩服。</h3>
+          <h3>你的愛情缺少的是-有情人缺「裝笨」：聰明的你應該不難發現你的愛情會缺少的東西吧！因為處處完美無缺的你，其實很容易造成對方的壓力，所以，適度的裝笨，或不小心出糗，反而能讓對方感覺到自己的被需要，對你的愛情可是一大幫助喔！</h3>
+          <h3>單身的人缺「傻勁」：若要評論你的愛情觀，可就不得不提醒你：做人有原則是需要的，但談感情的傻勁也不能少！畢竟愛情是不會挑日子來的，除了用大腦分析對方適不適合外，偶爾也讓自己跟著感覺走，搞不好一段美好的戀愛就此展開。</h3>
+          <div id="q22_button" class="back_button"><h2 class="button_text">重新測驗</h2></div>
+        </div>
+      </div>
+
+      <div id="q23_block" class="block">
+        <div class="divider_block">
+          <h2>你屬於：C型，Expresso情人</h2>
+          <h3>說到談戀愛，你可是不談則已，一談鐵定驚天動地的那種人，凡是被你「相中」的對象，就算沒和你配成對，恐怕也會對你過人的追求功夫嘆為觀止，就像小小一杯Espresso，滋味不一定甜美但絕對讓人刻骨銘心，那種畢其功於一役的熱，讓對方覺得和你談戀愛就像高空彈跳般緊張刺激，就算你喜歡的是萬人迷先生或Popular小姐，也別擔心，因為你滿腦子鬼靈精怪的想法和對生命的認真執著，會讓對方著迷不已呢！</h3>
+          <h3>有情人的缺「尊重」：凡是習慣掌控大局的你，再愛情裡總會不知不覺地成為嘮叨的另一半，太多的限制往往是你們爭執的起因，建議你該要學著用輕鬆欣賞的態度面對愛人和你的不同，更何況吸引你的人多半很有主見和想法，與其在妥協中拉扯不如相互尊重，創造一個雙贏的愛情。</h3>
+          <h3>單身的人缺「多觀察」：在愛情中多半會是主動者的你，不妨在有對象出現時，多加觀察再適度的出招，尤其是好友們的建議或旁人的看法一定要好好的思量一番，除了focus在注意的對象，有時也稍微分散一下注意力。嘿嘿！意外的收穫總會不期的發生喔！</h3>
+          <div id="q23_button" class="back_button"><h2 class="button_text">重新測驗</h2></div>
+        </div>
+      </div>
+
+      <div id="q24_block" class="block">
+        <div class="divider_block">
+          <h2>你屬於：D型，拿鐵情人</h2>
+          <h3>對於戀愛這檔事，永遠都也一顆初戀的心是你最令人著迷的地方，就像是拿鐵咖啡的香純奶味，喝上一口就有如坐在雲端般夢幻，就算現在已經年紀一大把或者是某某公司的總經理了，對於愛情的浪漫幻想永遠會讓你身旁的朋友嘖嘖稱奇，只要有你這種人存在，啥麼「一見鍾情」的理論就絕對不死。也因為這份愛情的認真態度，反而讓和你談戀愛的人都覺得自己在生命中談了一場成熟的戀愛。</h3>
+          <h3>有情人的缺「踏實」：和你談戀愛絕對在精神和心靈獲得無比的滿足，不過，習於活在自己的象牙塔是你愛情的致命傷，畢竟沒有麵包的愛情是很難存活的，約會前先衡量一下經濟狀況和時間限制，不但能讓你的愛情長長久久，還能讓對方感受到你的貼心而甜甜蜜蜜喔！</h3>
+          <h3>單身的人缺「拉寬限制」：眼光頗高的你，對於情人的條件可是像一千零一夜的故事一樣，說也說不完，在你一派清純的外表下嚴格的衡量標準可是很嚇人的，別老是嚷著沒對象，建議你先從欣賞別人的優點做起，將會發現愛情其實是來的很容易喔！</h3>
+          <div id="q24_button" class="back_button"><h2 class="button_text">重新測驗</h2></div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <div id="last_step"><img id="last_step_icon" src="../image/undo_black_54x54.png"/></div>
+</body>
+</html>
