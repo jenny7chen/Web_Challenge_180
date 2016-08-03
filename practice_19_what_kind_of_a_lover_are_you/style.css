@@ -1,0 +1,88 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  text-align: center;
+  background: brown;
+}
+
+form{
+  margin: 10px auto;
+  margin-top: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+h1{
+  color: white;
+}
+
+.button_text{
+  background: pink;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  display: inline-block;
+  color: brown;
+  cursor: pointer;
+}
+
+#start_block{
+  height: 100vh;
+}
+
+input[type=button] {
+    padding:5px 15px;
+    background:pink;
+    border:0 none;
+    cursor:pointer;
+    color: brown;
+}
+
+.block{
+  height: 100vh;
+  padding: 50px;
+  text-align: center;
+}
+
+.divider_block{
+  padding: 50px;
+  border: 5px dotted white;
+}
+
+h2{
+  color: white;
+  text-align: center;
+}
+
+#last_step{
+  width: 60px;
+	height: 60px;
+  position: fixed;
+  z-index: 999;
+  right: 50px;
+	bottom: 100px;
+  background-color: white;
+  -webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 2px 2px 2px #ffffff;
+}
+
+#last_step_icon{
+  position: relative;
+  top: calc(50% - 20px); /* 50% - 3/4 of icon height */
+  width: 40px;
+  height: 40px;
+}
