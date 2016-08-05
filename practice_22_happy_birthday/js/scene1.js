@@ -11,9 +11,11 @@ function startScene1(ctx, canvas){
   Scene1.bgReady = false;
   Scene1.heroReady = false;
   Scene1.monsterReady = false;
+  Scene1.floorReady = false;
   Scene1.bgImage = new Image();
   Scene1.heroImage = new Image();
   Scene1.monsterImage = new Image();
+  Scene1.floor;
   Scene1.sceneNumber = 1;
   Scene1.render = function(){
     if (this.bgReady) {
@@ -21,19 +23,26 @@ function startScene1(ctx, canvas){
     }
 
     if (this.heroReady) {
-      ctx.drawImage(Scene1.heroImage, hero.x, hero.y);
+      ctx.drawImage(Scene1.heroImage, hero.x, hero.y, 300, 300);
     }
 
-    if (this.monsterReady) {
-      ctx.drawImage(Scene1.monsterImage, monster.x, monster.y);
+    if(this.floorReady){
+      ctx.drawImage(Scene1.floor, 0, 600, canvas.width, 10);
     }
+    // if (this.monsterReady) {
+    //   ctx.drawImage(Scene1.monsterImage, monster.x, monster.y);
+    // }
 
     // Score
-    ctx.fillStyle = "rgb(250, 250, 250)";
+    ctx.fillStyle = "rgb(0, 0, 0)";
+    ctx.font = "24px Helvetica";
+    ctx.textAlign = "left";
+    ctx.textBaseline = "top";
+    ctx.fillText("劍破天下", 32, 32);
   }
   // Reset the game when the player catches a monster
   Scene1.reset = function () {
-    hero.x = canvas.width / 2;
+    hero.x = 0;
     hero.y = canvas.height / 2;
 
     // Throw the monster somewhere on the screen randomly
@@ -44,13 +53,32 @@ function startScene1(ctx, canvas){
     var action = getCharacterAction();
     if(action == goTop){
       hero.y -= hero.speed * modifier;
+      Scene1.heroImage.src = "../image/character/kai_jump.png";
     }else if(action == goDown){
       hero.y += hero.speed * modifier;
+      Scene1.heroImage.src = "../image/character/kai_idle.png";
     }else if(action == goLeft){
       hero.x -= hero.speed * modifier;
+      Scene1.heroImage.src = "../image/character/kai_go_left.png";
     }else if(action == goRight){
       hero.x += hero.speed * modifier;
+      Scene1.heroImage.src = "../image/character/kai_go_right.png";
+    }else if(action == idle){
+      Scene1.heroImage.src = "../image/character/kai_idle.png";
     }
+
+    if(hero.y > 350){
+      hero.y = 350;
+    }else if(hero.y < 0){
+      hero.y = 0;
+    }
+
+    if(hero.x < -30){
+      hero.x = -30;
+    }else if(hero.x > 750){
+      hero.x = 750;
+    }
+
 
     // Are they touching?
     if (
@@ -64,15 +92,11 @@ function startScene1(ctx, canvas){
     }
   }
   Scene1.start = function(){
-    // var ctx = this.ctx;
-    // var canvas = this.canvas;
-    // Background image
-    // var bgReady = false;
-    // var heroReady = false;
-    // var monsterReady = false;
     Scene1.bgImage = new Image();
+    Scene1.floor = new Image();
     Scene1.heroImage = new Image();
     Scene1.monsterImage = new Image();
+    Scene1.heroImage.className = "hero";
 
     Scene1.heroImage.onload = function () {
       Scene1.heroReady = true;
@@ -83,9 +107,14 @@ function startScene1(ctx, canvas){
     Scene1.bgImage.onload = function () {
       Scene1.bgReady = true;
     };
-    Scene1.heroImage.src = "../image/door/green_door.png";
+    Scene1.floor.onload = function () {
+      Scene1.floorReady = true;
+    };
+
+    Scene1.heroImage.src = "../image/character/kai_idle.png";
     Scene1.monsterImage.src = "../image/door/orange_door.png";
-    Scene1.bgImage.src = "../image/beautiful_view.jpg";
+    Scene1.bgImage.src = "../image/character/bg.png";
+    Scene1.floor.src = "../image/character/floor.png";
 
     then = Date.now();
     Scene1.reset();
