@@ -106,8 +106,8 @@ function startScene1(ctx, canvas){
     ) {
       Scene1.reset();
       if(warningCount > 3){
-        warning = "你被星星刺死了, 聽不懂ㄇ"
         canMove = false;
+        warning = "你被星星刺死了, 聽不懂ㄇ"
         setTimeout(function(){
           pass = "看你這麼笨, 給你過好了";
           setTimeout(function(){
@@ -157,7 +157,7 @@ function startScene1(ctx, canvas){
     var now = Date.now();
     var delta = now - then;
 
-    Scene1.update(delta / 1000);
+    Scene1.update(delta / 800);
     Scene1.render();
 
     then = now;
