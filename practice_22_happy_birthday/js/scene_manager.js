@@ -1,3 +1,5 @@
+var playerId;
+
 function Scene(ctx, canvas){
   this.ctx = ctx;
   this.canvas = canvas;
@@ -28,7 +30,15 @@ function loadScene(scene){
   registerEvent();
 }
 
-$(document).ready(function(){
-  var sceneCount = 5;
-  loadScene(1);
-});
+function clearScene(){
+  var container = document.getElementById("scene_container");
+  while (container.hasChildNodes()) {
+    container.removeChild(container.lastChild);
+  }
+}
+
+function onSceneEnd(sceneNumber){
+  clearScene();
+  if(sceneNumber == 1){
+  }
+}

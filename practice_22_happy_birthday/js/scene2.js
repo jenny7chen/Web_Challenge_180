@@ -1,6 +1,6 @@
 function startScene1(ctx, canvas){
   var timerId = 0;
-  var story = ["簡單講就是有一天, 小坑第一帥的頭銜被邪惡的燃搔軍團搶走了", "頭銜被藏在骨爾丹的家", "身為強大的玩家, 接下來你應該知道要怎麼做了吧!", "看你大概是不知道,快速講講", "上下左右鍵控制你的人物, 與物品互動可以用空白鍵, 就降", "別想逃走啊 拉G", "Go"];
+  var story = ["簡單講就是有一天, 小坑第一帥的頭銜被邪惡的燃搔軍團搶走了", "頭銜被藏在骨爾丹的家", "身為強大的玩家, 接下來你應該知道要怎麼做了吧!", "別想逃走啊 拉G", "Go"];
   var warning = "";
   var pass = "";
   var warningCount = 0;
@@ -175,5 +175,5 @@ function startScene1(ctx, canvas){
       return;
     }
     currentStoryText++;
-  }, 3500);
+  }, 4000);
 }

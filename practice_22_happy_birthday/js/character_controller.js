@@ -10,8 +10,12 @@ var goDown = 1;
 var goLeft = 2;
 var goRight = 3;
 var idle = 4;
+var canMove = false;
 
 function getCharacterAction(){
+  if(!canMove){
+    return idle;
+  }
   if (38 in keysDown) { // Player holding up
     return goTop;
     // hero.y -= hero.speed * modifier;
