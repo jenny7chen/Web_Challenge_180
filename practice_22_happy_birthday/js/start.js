@@ -15,7 +15,7 @@ $(document).ready(function(){
     playerId = id;
     clearScene();
 
-    loadScene(2);
+    loadScene(1);
     appendAudio();
     startSoundEffect("ok", true);
     setTimeout(function(){
@@ -28,7 +28,7 @@ function appendAudio(){
   audio = document.createElement("audio");
   audio.setAttribute("autoplay", "autoplay");
   audio.setAttribute("preload", "none");
-  audio.volume = 0.1;
+  audio.volume = 0.2;
   $("body").append(audio);
 }
 

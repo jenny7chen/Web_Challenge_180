@@ -1,6 +1,6 @@
 function startScene3(ctx, canvas){
   var timerId = 0;
-  var story = ["拿完了武器, 粗花去骨爾丹的家囉"];
+  var story = ["拿完了武器, 粗花去骨爾丹的家囉", "路程大概有三千里路, 用走的也許會走很久", "看到一個寫著坐騎的寶箱, 感覺是好東西"];
   var warning = "";
   var pass = "";
   var currentStoryText = 0;
@@ -46,7 +46,7 @@ function startScene3(ctx, canvas){
     }
 
     if (!hasTurtle && !end && this.monsterReady) {
-      ctx.drawImage(Scene3.monsterImage, monster.x, monster.y, 70, 70);
+      ctx.drawImage(Scene3.monsterImage, monster.x, monster.y, 120, 150);
     }
 
     // Score
@@ -75,7 +75,7 @@ function startScene3(ctx, canvas){
 
     monsPosition = resetTimes % resetMonsPosition.length;
     monster.x = resetMonsPosition[monsPosition];
-    monster.y = 32 + 500;
+    monster.y = 470;
   }
   Scene3.update = function(modifier){
     var action = getCharacterAction();
@@ -137,26 +137,38 @@ function startScene3(ctx, canvas){
     }
     if(!hasTurtle && !end){
       if(
-        ((hero.y + 220) >= monster.y) && (((hero.x + 180 >= monster.x + 52) && (hero.x + 180 <= monster.x + 70))||((hero.x <= monster.x + 32) && (hero.x >= monster.x))||(hero.x <= monster.x && (hero.x +180) >= (monster.x + 70)))
+        ((hero.y + 220) >= monster.y) && (((hero.x + 180 >= monster.x + 20) && (hero.x + 180 <= monster.x + 80))||((hero.x <= monster.x + 80) && (hero.x >= monster.x + 20))||(hero.x <= monster.x && (hero.x +180) >= (monster.x + 20)))
       ) {
-        warning = "烏龜坐騎已加入你的收藏"
+        warning = "烏龜坐騎已加入你的收藏";
         hasTurtle = true;
         setTimeout(function(){
           warning = "";
         }, 1700);
         setTimeout(function(){
-          $("#scene_container").append("<div id=\"leave_turtle_div\"><h2 id=\"leave_turtle\">下坐騎</h2></div>");
+          $("#scene_container").append("<div id=\"leave_turtle_div\"><h2 id=\"leave_turtle\">離開烏龜坐騎</h2></div>");
           $("#leave_turtle").click(function(){
-            hasTurtle = false;
-            end = true;
-            Scene3.reset();
-            pass = "烏龜傷心的開了傳送門跑走了, 留下了往骨爾丹的家的傳送門";
-            setTimeout(function(){
-              pass = "";
-            }, 2000);
-            $("#leave_turtle_div").remove();
+            var answer=confirm('你離開了烏龜烏龜會很傷心, 確定要離開嗎?');
+            if(answer){
+              hasTurtle = false;
+              end = true;
+              Scene3.reset();
+              pass = "烏龜傷心的開了傳送門跑走了, 留下了往骨爾丹的家的傳送門";
+              setTimeout(function(){
+                pass = "烏龜坐騎已從你的收藏移除";
+                setTimeout(function(){
+                  pass = "";
+                }, 2000);
+              }, 2500);
+              $("#leave_turtle_div").remove();
+            }
+            else{
+              warning = "烏龜對你的決定感到非常安慰";
+              setTimeout(function(){
+                warning = "";
+              }, 1700);
+            }
           });
-        }, 10000);
+        }, 20000);
       }
     }
   }
@@ -186,7 +198,7 @@ function startScene3(ctx, canvas){
     }
 
     Scene3.heroImage.src = "../image/character/kai_idle.png";
-    Scene3.monsterImage.src = "../image/character/star.png";
+    Scene3.monsterImage.src = "../image/character/treasure.png";
     Scene3.bgImage.src = "../image/character/bg.png";
     Scene3.floor.src = "../image/character/floor.png";
     Scene3.doorImage.src = "../image/door/blue_door.png";
