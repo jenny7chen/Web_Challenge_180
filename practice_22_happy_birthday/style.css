@@ -75,7 +75,7 @@ input{
   width: 100px;
   height: 100px;
   display: inline-block;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 #scene2_story{
@@ -87,4 +87,13 @@ input{
   margin-top: 250px;
   font: 30px Helvetica;
   color: red;
+}
+
+#leave_turtle_div{
+  background-color: yellow;
+  text-align: center;
+}
+
+#leave_turtle{
+  cursor: pointer;
 }

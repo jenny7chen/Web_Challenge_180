@@ -96,8 +96,8 @@ function startScene1(ctx, canvas){
 
     if(hero.x < -30){
       hero.x = -30;
-    }else if(hero.x > 750){
-      hero.x = 750;
+    }else if(hero.x > 850){
+      hero.x = 850;
     }
 
 
@@ -111,6 +111,7 @@ function startScene1(ctx, canvas){
           pass = "算了, 看你這麼笨, 讓你過去好了";
           setTimeout(function(){
             onSceneEnd(1);
+            cancelAnimationFrame(windowReqId);
           }, 3000);
         }, 3000);
         canMove = false;
@@ -163,7 +164,7 @@ function startScene1(ctx, canvas){
     then = now;
 
     // Request to do this again ASAP
-    requestAnimationFrame(Scene1.main);
+    windowReqId = requestAnimationFrame(Scene1.main);
   };
   Scene1.start();
 

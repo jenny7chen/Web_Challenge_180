@@ -28,7 +28,7 @@ function appendAudio(){
   audio = document.createElement("audio");
   audio.setAttribute("autoplay", "autoplay");
   audio.setAttribute("preload", "none");
-  audio.volume = 0.2;
+  audio.volume = 0.1;
   $("body").append(audio);
 }
 

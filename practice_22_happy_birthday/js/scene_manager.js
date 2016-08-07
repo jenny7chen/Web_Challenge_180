@@ -1,4 +1,5 @@
 var playerId;
+var windowReqId;
 
 function Scene(ctx, canvas){
   this.ctx = ctx;
@@ -28,9 +29,15 @@ function loadScene(scene){
     var ctx = data[0];
     var canvas = data[1];
     startScene1(ctx, canvas);
-  }
-  else if(scene == 2){
+
+  }else if(scene == 2){
     startScene2();
+
+  }else if(scene ==3){
+    var data = createScene();
+    var ctx = data[0];
+    var canvas = data[1];
+    startScene3(ctx, canvas);
   }
   registerEvent();
 }
@@ -47,6 +54,8 @@ function onSceneEnd(sceneNumber){
   if(sceneNumber == 1){
     loadScene(2);
   }else if(sceneNumber == 2){
-    stopMusic();
+    loadScene(3);
+  }else if(sceneNumber == 3){
+    
   }
 }
