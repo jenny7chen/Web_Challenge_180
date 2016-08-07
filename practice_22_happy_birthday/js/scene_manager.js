@@ -23,10 +23,15 @@ function createScene(){
 }
 
 function loadScene(scene){
-  var data = createScene();
-  var ctx = data[0];
-  var canvas = data[1];
-  startScene1(ctx, canvas);
+  if(scene == 1){
+    var data = createScene();
+    var ctx = data[0];
+    var canvas = data[1];
+    startScene1(ctx, canvas);
+  }
+  else if(scene == 2){
+    startScene2();
+  }
   registerEvent();
 }
 
@@ -40,5 +45,8 @@ function clearScene(){
 function onSceneEnd(sceneNumber){
   clearScene();
   if(sceneNumber == 1){
+    loadScene(2);
+  }else if(sceneNumber == 2){
+    stopMusic();
   }
 }

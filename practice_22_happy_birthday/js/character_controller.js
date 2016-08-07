@@ -32,5 +32,5 @@ function getCharacterAction(){
     // hero.x += hero.speed * modifier;
     return goRight;
   }
-  return idle;
+  return -1;
 }

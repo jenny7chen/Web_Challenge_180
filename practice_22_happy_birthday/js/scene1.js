@@ -106,21 +106,21 @@ function startScene1(ctx, canvas){
     ) {
       Scene1.reset();
       if(warningCount > 3){
-        canMove = false;
         warning = "你被星星刺死了, 聽不懂ㄇ"
         setTimeout(function(){
-          pass = "看你這麼笨, 給你過好了";
+          pass = "算了, 看你這麼笨, 讓你過去好了";
           setTimeout(function(){
             onSceneEnd(1);
-          }, 2000);
-        }, 2000);
+          }, 3000);
+        }, 3000);
+        canMove = false;
       }else{
         warning = "你被星星刺死了"
       }
       warningCount++;
       setTimeout(function(){
         warning = "";
-      }, 2000);
+      }, 1700);
     }
   }
   Scene1.start = function(){
