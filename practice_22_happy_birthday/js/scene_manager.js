@@ -54,8 +54,10 @@ function onSceneEnd(sceneNumber){
   if(sceneNumber == 1){
     loadScene(2);
   }else if(sceneNumber == 2){
+    $("#sound").remove();
+    setMusic("Rodeo_Show");
     loadScene(3);
   }else if(sceneNumber == 3){
-    
+
   }
 }

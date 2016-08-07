@@ -1,6 +1,6 @@
 function startScene3(ctx, canvas){
   var timerId = 0;
-  var story = ["拿完了武器, 粗花去骨爾丹的家囉", "路程大概有三千里路, 用走的也許會走很久", "看到一個寫著坐騎的寶箱, 感覺是好東西"];
+  var story = ["拿到了泰坦戰鑄餓毒香爐!! 粗花去骨爾丹的家囉", "路程大概有三千里路, 用走的也許會走很久", "看到一個寫著坐騎的寶箱, 感覺是好東西"];
   var warning = "";
   var pass = "";
   var currentStoryText = 0;
