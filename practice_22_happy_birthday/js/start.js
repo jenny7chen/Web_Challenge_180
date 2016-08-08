@@ -41,8 +41,8 @@ function stopMusic(){
 }
 
 function setMusic(newMusic){
-  if(source != undefined && source.parendNode != undefined){
-    audio.removeChild(sound);
+  if($("source") != undefined){
+    $("source").remove();
   }
   source = document.createElement("source");
   source.src = "music/" + newMusic + ".mp3";

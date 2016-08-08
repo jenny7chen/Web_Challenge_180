@@ -41,7 +41,7 @@ function loadScene(scene){
 
   }else if(scene == 4){
     startScene4();
-    
+
   }else if(scene == 5){
     var data = createScene();
     var ctx = data[0];
@@ -69,6 +69,10 @@ function onSceneEnd(sceneNumber){
   }else if(sceneNumber == 3){
     loadScene(4);
   }else if(sceneNumber == 4){
+    setMusic("Black_and_White")
     loadScene(5);
+  }else{
+    setMusic("At_The_Fair");
+    startSceneEnd();
   }
 }
