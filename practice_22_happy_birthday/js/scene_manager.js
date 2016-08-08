@@ -38,6 +38,9 @@ function loadScene(scene){
     var ctx = data[0];
     var canvas = data[1];
     startScene3(ctx, canvas);
+    
+  }else if(scene == 4){
+    startScene4();
   }
   registerEvent();
 }
@@ -58,6 +61,6 @@ function onSceneEnd(sceneNumber){
     setMusic("Rodeo_Show");
     loadScene(3);
   }else if(sceneNumber == 3){
-
+    loadScene(4);
   }
 }

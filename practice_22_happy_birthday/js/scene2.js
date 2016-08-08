@@ -1,7 +1,7 @@
 function startScene2(){
   var story = ["...", "通過了星星的考驗之後,", "走阿走, 你來到了你的裝備倉庫", "俗話說:工欲善其事, 必先利其器", "要打骨爾丹沒有裝備怎麼可以", "但很不幸的你倉庫的門有設密碼鎖", "密碼是什麼呢?"];
   var hintText = "提示:  我是什麼?";
-  var currentStoryText = 1;
+  var currentStoryText = 0;
   var timerId = 0;
   var selector = document.createElement("div");
   selector.id = "selector";

@@ -112,6 +112,7 @@ function startScene1(ctx, canvas){
           setTimeout(function(){
             onSceneEnd(1);
             cancelAnimationFrame(windowReqId);
+            return; // need to return to prevent request again
           }, 3000);
         }, 3000);
         canMove = false;

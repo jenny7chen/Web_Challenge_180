@@ -1,11 +1,12 @@
 function startScene3(ctx, canvas){
   var timerId = 0;
-  var story = ["拿到了泰坦戰鑄餓毒香爐!! 粗花去骨爾丹的家囉", "路程大概有三千里路, 用走的也許會走很久", "看到一個寫著坐騎的寶箱, 感覺是好東西"];
+  var story = ["拿到了泰坦戰鑄餓毒香爐!! 粗花去骨爾丹的家囉", "路程大概有三千里路, 用走的也許會走很久", "看到一個寫著坐騎的寶箱, 要騎還是靠自己往前走呢？A_A"];
   var warning = "";
   var pass = "";
   var currentStoryText = 0;
   var hasTurtle = false;
   var end = false;
+  var sceneEnd = false;
   var resetTimes = 0;
   var resetMonsPosition = [500, 700, 300];
   // Game objects
@@ -127,14 +128,17 @@ function startScene3(ctx, canvas){
       hero.x = 850;
     }
 
-    if(!end && hero.x == 850){
-      resetTimes++;
-      Scene3.reset();
-
-    }else if(end && hero.x == 850){
+    if(end && hero.x == 850){
       onSceneEnd(3);
       cancelAnimationFrame(windowReqId);
+      sceneEnd = true;
+      return;
+
+    }else if(!end&& hero.x == 850){
+      resetTimes++;
+      Scene3.reset();
     }
+
     if(!hasTurtle && !end){
       if(
         ((hero.y + 220) >= monster.y) && (((hero.x + 180 >= monster.x + 20) && (hero.x + 180 <= monster.x + 80))||((hero.x <= monster.x + 80) && (hero.x >= monster.x + 20))||(hero.x <= monster.x && (hero.x +180) >= (monster.x + 20)))
@@ -168,11 +172,10 @@ function startScene3(ctx, canvas){
               }, 1700);
             }
           });
-        }, 20000);
+        }, 17000);
       }
     }
   }
-
   Scene3.start = function(){
     Scene3.bgImage = new Image();
     Scene3.floor = new Image();
@@ -217,7 +220,9 @@ function startScene3(ctx, canvas){
     then = now;
 
     // Request to do this again ASAP
-    windowReqId = requestAnimationFrame(Scene3.main);
+    if(!sceneEnd){
+      windowReqId = requestAnimationFrame(Scene3.main);
+    }
   };
   Scene3.start();
 

@@ -97,3 +97,32 @@ input{
 #leave_turtle{
   cursor: pointer;
 }
+
+#puzzle_container{
+  margin-left: 200px;
+  margin-top: 100px;
+  width: auto;
+}
+
+.piece_container{
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.piece{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.ui-draggable-dragging{
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
