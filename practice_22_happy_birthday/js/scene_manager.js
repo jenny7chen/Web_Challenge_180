@@ -38,9 +38,15 @@ function loadScene(scene){
     var ctx = data[0];
     var canvas = data[1];
     startScene3(ctx, canvas);
-    
+
   }else if(scene == 4){
     startScene4();
+    
+  }else if(scene == 5){
+    var data = createScene();
+    var ctx = data[0];
+    var canvas = data[1];
+    startScene5(ctx, canvas);
   }
   registerEvent();
 }
@@ -62,5 +68,7 @@ function onSceneEnd(sceneNumber){
     loadScene(3);
   }else if(sceneNumber == 3){
     loadScene(4);
+  }else if(sceneNumber == 4){
+    loadScene(5);
   }
 }

@@ -15,7 +15,7 @@ $(document).ready(function(){
     playerId = id;
     clearScene();
 
-    loadScene(3);
+    loadScene(1);
     appendAudio();
     startSoundEffect("ok", true);
     setTimeout(function(){
