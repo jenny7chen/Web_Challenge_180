@@ -1,0 +1,45 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  background-color: #ffeead;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h1{
+  margin-top: 100px;
+}
+
+#game_container{
+  width: 230px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.start{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #ffcc5c;
+  float: left;
+}
+
+.path{
+  position: relative;
+  width: 150px;
+  height: 40px;
+  background-color: #96ceb4;
+  float: left;
+}
+
+.end{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #ff6f69;
+  float: right;
