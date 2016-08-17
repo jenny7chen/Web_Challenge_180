@@ -1,6 +1,8 @@
 var next = "html/next1.html";
+var home = "index.html";
 function setNextPage(nextPage){
   next = nextPage;
+  home = "../index.html"
 }
 
 $(document).ready(function(){
@@ -39,6 +41,6 @@ $(document).ready(function(){
   });
 
   $("#restart_button").click(function(){
-    window.location.replace("../index.html");
+    window.location.replace(home);
   });
 });
