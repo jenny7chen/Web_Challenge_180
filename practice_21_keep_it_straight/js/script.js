@@ -8,14 +8,17 @@ $(document).ready(function(){
   var win = false;
   var start = false;
   $(".start").mouseenter(function(){
+    if(win == true){
+      return;
+    }
     start = true;
     $(".end").mouseenter(function(){
-      win = true;
       if(!start){
         return;
       }
+      win = true;
       start = false;
-      $("#hint").text(complements[randomInt(0, complements.length)]);
+      $("#hint").text(complements[randomInt(0, complements.length - 1)]);
       $("#next_button").css("display", "inline-block");
       $("#restart_button").css("display", "inline-block");
     });
