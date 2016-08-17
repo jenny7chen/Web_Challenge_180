@@ -1,0 +1,178 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  text-align: center;
+}
+
+#scene_container{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+  width: 1000px;
+  height: 800px;
+}
+
+canvas{
+  text-align: center;
+  border: 5px solid black;
+}
+
+.hero{
+  width: 50px;
+  height: 50px;
+}
+
+.floor{
+  background-color: black;
+}
+
+.start_area{
+  border: 5px solid black;
+  width: 1000px;
+  height: 800px;
+  text-align: center;
+}
+
+.start{
+  margin-top: 200px;
+}
+
+#button, #scene4_button{
+  cursor: pointer;
+  margin-top: 100px;
+  font-size: 30px;
+}
+
+#button_text, #button_text1, #button_text2{
+  border: 5px solid black;
+  display: inline-block;
+  padding: 10px;
+}
+
+#scene4_button{
+  margin-top: 50px;
+}
+
+input{
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+#id{
+  height: 100px;
+  font-size: 50px;
+  margin-top: 50px;
+}
+
+#selector{
+  margin-top: 30px;
+}
+
+.select_item{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  font-size: 50px;
+}
+
+#scene2_story{
+  margin-top: 270px;
+  font: 30px Helvetica;
+}
+
+#scene2_hint{
+  margin-top: 250px;
+  font: 30px Helvetica;
+  color: red;
+}
+
+#leave_turtle_div{
+  background-color: yellow;
+  text-align: center;
+}
+
+#leave_turtle{
+  cursor: pointer;
+}
+
+#puzzle_container{
+  margin-left: 200px;
+  margin-top: 100px;
+  width: auto;
+}
+
+.piece_container{
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+
+.piece{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.ui-draggable-dragging{
+  cursor: move; /* fallback if grab cursor is unsupported */
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+#dialog{
+  width: auto;
+  height: 500px;
+  text-align: center;
+}
+
+#dialog_content{
+  font-size: 20px;
+}
+
+.ui-widget.success-dialog {
+    font-family: Verdana,Arial,sans-serif;
+    font-size: .8em;
+}
+
+.ui-widget-content.success-dialog {
+    background: #F9F9F9;
+    border: 1px solid #90d93f;
+    color: #222222;
+}
+
+.ui-dialog.success-dialog {
+    outline: 0 none;
+    padding: 0 !important;
+}
+
+.ui-dialog.success-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ui-dialog.success-dialog .ui-widget-header {
+    background: #b0de78;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog.success-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    font-size: 1em;
+}

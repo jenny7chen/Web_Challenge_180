@@ -1,0 +1,22 @@
+#game_container{
+  width: 400px;
+}
+
+.path{
+  position: relative;
+  width: 360px;
+  height: 20px;
+  background-color: #96ceb4;
+  float: left;
+  cursor: none;
+}
+
+.start{
+  width: 20px;
+  height: 20px;
+}
+
+.end{
+  width: 20px;
+  height: 20px;
+}
