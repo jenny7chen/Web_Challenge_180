@@ -1,0 +1,40 @@
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Londrina Outline', cursive;
+}
+
+body{
+  background-color: #d5f4e6;
+  text-align: center;
+}
+
+h1{
+  display: inline-block;
+  font-size: 50px;
+}
+
+.number{
+  font-size: 70px;
+}
+
+#time_container{
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  margin: auto;
+  padding: 50px;
+  border: 5px dotted black;
+  margin-top: 200px;
+}
+
+.button{
+  margin: 20px;
+  cursor: pointer;
+  color: #80ced6;
+}
+
+.b_disabled{
+  color: gray;
+}
